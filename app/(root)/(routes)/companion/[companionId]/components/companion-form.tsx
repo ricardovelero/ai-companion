@@ -106,6 +106,8 @@ export default function CompanionForm({
         variant: "default",
         description: "Success",
       });
+
+      router.push("/");
       router.refresh();
     } catch (error) {
       console.log(error, "⚠️ Something went wrong");
