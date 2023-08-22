@@ -37,7 +37,7 @@ export default function ChatHeader({ companion }: ChatClientProps) {
 
   const onDelete = async () => {
     try {
-      await axios.delete(`/companion/${companion.id}`);
+      await axios.delete(`/api/companion/${companion.id}`);
 
       toast({
         description: "😎 Success.",
