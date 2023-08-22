@@ -1,3 +1,5 @@
+"use client";
+
 import { Avatar, AvatarImage } from "./ui/avatar";
 
 interface BotAvatarProps {
