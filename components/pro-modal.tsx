@@ -11,7 +11,7 @@ import {
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import { useToast } from "./ui/use-toast";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function ProModal() {
@@ -19,6 +19,13 @@ export default function ProModal() {
   const { toast } = useToast();
 
   const [loading, setLoading] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
 
   async function onSubscribe() {
     try {
