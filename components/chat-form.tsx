@@ -27,6 +27,7 @@ export default function ChatForm({
       onSubmit={onSubmit}
       className="border-t border-primary/10 py-4 flex items-center gap-x-2">
       <Input
+        autoFocus
         disabled={isLoading}
         value={input}
         onChange={handleInputChange}
