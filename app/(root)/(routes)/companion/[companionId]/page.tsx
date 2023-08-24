@@ -12,7 +12,6 @@ export default async function CompanionIdPage({
   params,
 }: CompanionIdPageProps) {
   const { userId } = auth();
-  //TODO: Check subscription
 
   if (!userId) return redirectToSignIn();
 

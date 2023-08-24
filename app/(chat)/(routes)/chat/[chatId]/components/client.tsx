@@ -47,7 +47,7 @@ export default function ChatClient({ companion }: ChatClientProps) {
     };
 
     setMessages((current) => [...current, userMessage]);
-
+    setInput("");
     handleSubmit(e);
   };
 

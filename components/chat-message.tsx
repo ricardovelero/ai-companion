@@ -1,15 +1,6 @@
 "use client";
 
 import { BeatLoader } from "react-spinners";
-
-export interface ChatMessageProps {
-  role: "system" | "user";
-  content?: string;
-  isLoading?: boolean;
-  src?: string;
-}
-
-import React from "react";
 import { useToast } from "./ui/use-toast";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
@@ -17,6 +8,13 @@ import BotAvatar from "./bot-avatar";
 import UserAvatar from "./user-avatar";
 import { Button } from "./ui/button";
 import { Copy } from "lucide-react";
+
+export interface ChatMessageProps {
+  role: "system" | "user";
+  content?: string;
+  isLoading?: boolean;
+  src?: string;
+}
 
 export default function ChatMessage({
   role,
