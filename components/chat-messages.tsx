@@ -43,7 +43,7 @@ export default function ChatMessages({
       />
       {messages.map((message) => (
         <ChatMessage
-          key={message.content}
+          key={Date.now() + Math.random() * 10000}
           src={companion.src}
           content={message.content}
           role={message.role}
